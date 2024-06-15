@@ -1,0 +1,25 @@
+создайте класс Студент с основными параметром "имя студента"
+
+Необходимо обеспечить хранение данных о книгах, которые были прочитаны каждым студентом (String)
+
+Задача: вывести список наименований всех книг, которые были прочитаны студентами (без повторов)
+
+*) отобрать книги, наименование которых не содержит 'HTML'
+
+
+ /* второй вариант решения с стримом
+    List<Student> students = Arrays.asList(student1,student2);
+
+    List<String> bookNames = students.stream()
+            .map(student -> student.getBook())
+            .flatMap(setCollection -> setCollection.stream())
+            .distinct()
+            .toList();
+
+        System.out.println(bookNames);
+
+    List<String> noHtmlBooks = bookNames.stream()
+            .filter(bookName -> !bookName.contains("HTML"))
+            .toList();
+
+        System.out.println(noHtmlBooks);/*
